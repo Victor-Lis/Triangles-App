@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "triangles-app",
+    "name": "Triangles App",
     "slug": "triangles-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dev_victor.trianglesapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "16e49193-faee-4a72-a776-7ef04ae1014a"
+      }
     }
   }
 }

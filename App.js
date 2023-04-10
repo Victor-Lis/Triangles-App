@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+
+import Login from './src/Components/Login';
+import BottomTabRoute from './src/Route/BottomTabRoute';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  
+  const [user, setUser] = useState(null) 
+  const [userName, setUserName] = useState(null)
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if(!user){
+
+    return(
+
+      <Login newUser={setUser} setUserName={setUserName}/>
+
+    )
+
+  }else{
+
+    return (
+
+      <NavigationContainer>
+  
+        <BottomTabRoute userUid={user}/>
+
+      </NavigationContainer>
+
+    );      
+  }
+}
