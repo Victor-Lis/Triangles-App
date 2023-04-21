@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         backgroundColor: "#f2f6fc",
         paddingHorizontal: 10,
-
+       
     },
     input: {
 
